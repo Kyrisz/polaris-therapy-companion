@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { mondayContainingLocalDate } from "../diary/diaryWeekModel";
+import { DictateParagraphControls } from "./DictateParagraphControls";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import { loadWeeklyIntention, saveWeeklyIntention } from "../storage";
 
 export function WeeklyIntentionCard() {
@@ -66,6 +68,7 @@ export function WeeklyIntentionCard() {
           onChange={(e) => setText(e.target.value)}
           placeholder="e.g. Notice urges without acting · one kind text when I feel alone"
         />
+        <DictateParagraphControls mergeChunk={(chunk) => setText((p) => appendSpokenChunk(p, chunk))} />
       </label>
       <label className="field">
         Skill or theme tag (optional)
@@ -76,6 +79,7 @@ export function WeeklyIntentionCard() {
           placeholder="e.g. TIPP, opposite action, self-validation"
           maxLength={80}
         />
+        <DictateParagraphControls mergeChunk={(chunk) => setSkillTag((p) => appendSpokenChunk(p, chunk))} />
       </label>
       <button type="button" className="btn secondary btn-compact" onClick={save}>
         Save for this week

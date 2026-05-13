@@ -4,6 +4,8 @@ import diaryCard from "../../data/diary-card.json";
 import skillsModules from "../../data/skills-modules.json";
 import weeklyReview from "../../data/weekly-review.json";
 import { mondayContainingLocalDate } from "../diary/diaryWeekModel";
+import { DictateParagraphControls } from "../components/DictateParagraphControls";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import type { WeekdayId, WeeklyEntry } from "../types";
 import { loadDiaryWeeks, loadWeekly, saveWeekly, uid } from "../storage";
 
@@ -216,6 +218,14 @@ export default function WeeklyReview() {
                 setResponses((prev) => ({
                   ...prev,
                   [p.id]: e.target.value,
+                }))
+              }
+            />
+            <DictateParagraphControls
+              mergeChunk={(chunk) =>
+                setResponses((prev) => ({
+                  ...prev,
+                  [p.id]: appendSpokenChunk(prev[p.id] ?? "", chunk),
                 }))
               }
             />

@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import weeklyReview from "../../data/weekly-review.json";
+import { DictateParagraphControls } from "../components/DictateParagraphControls";
 import { addCalendarDaysLocal, formatLocalYMD, mondayContainingLocalDate } from "../diary/diaryWeekModel";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import { buildInsights } from "../insights/buildInsights";
 import { loadDayTaglines, loadDiaryWeeks, loadJournal, loadMood, loadSpiral, loadWeekly } from "../storage";
 
@@ -123,6 +125,7 @@ export default function PrintTherapyBundle() {
             onChange={(e) => setTopSummary(e.target.value)}
             placeholder="3–5 sentences: what matters most to bring up, what changed, what you want help with."
           />
+          <DictateParagraphControls mergeChunk={(chunk) => setTopSummary((p) => appendSpokenChunk(p, chunk))} />
         </label>
       </section>
 

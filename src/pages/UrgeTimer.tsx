@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { CrisisSupportNote } from "../components/CrisisSupportNote";
+import { DictateParagraphControls } from "../components/DictateParagraphControls";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import type { UrgeTimerSession } from "../types";
 import { appendUrgeTimerSession, loadUrgeTimerLog, uid } from "../storage";
 
@@ -142,6 +144,7 @@ export default function UrgeTimer() {
             <label className="field">
               Note
               <textarea value={note} onChange={(e) => setNote(e.target.value)} rows={3} placeholder="What shifted, if anything?" />
+              <DictateParagraphControls mergeChunk={(chunk) => setNote((p) => appendSpokenChunk(p, chunk))} />
             </label>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
               <button type="button" className="btn" onClick={saveSession}>

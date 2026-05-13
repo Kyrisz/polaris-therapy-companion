@@ -1,6 +1,8 @@
 import { useMemo, useState } from "react";
 import diaryCard from "../../data/diary-card.json";
 import type { MoodEntry } from "../types";
+import { DictateParagraphControls } from "../components/DictateParagraphControls";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import { loadMood, saveMood, uid } from "../storage";
 
 const presetEmotions = diaryCard.emotionColumns.map((e) => e.label);
@@ -80,6 +82,7 @@ export default function MoodTracker() {
         <label className="field">
           Notes (optional)
           <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Context, needs, next step" />
+          <DictateParagraphControls mergeChunk={(chunk) => setNotes((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <button type="button" className="btn" onClick={save}>
           Log mood

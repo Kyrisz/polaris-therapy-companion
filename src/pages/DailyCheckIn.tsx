@@ -2,8 +2,10 @@ import { Fragment, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import diaryCard from "../../data/diary-card.json";
 import skillsModules from "../../data/skills-modules.json";
+import { DictateParagraphControls } from "../components/DictateParagraphControls";
 import type { ActionYN, DiaryWeekEntry, PromptingEventRow, WeekdayId } from "../types";
 import { mondayContainingLocalDate } from "../diary/diaryWeekModel";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import { loadDiaryWeeks, saveDiaryWeeks, uid } from "../storage";
 
 type DiaryCard = typeof diaryCard;
@@ -356,6 +358,17 @@ export default function DailyCheckIn() {
                       rows={2}
                       placeholder="Trigger / facts"
                     />
+                    <DictateParagraphControls
+                      mergeChunk={(chunk) =>
+                        setEvents((prev) => {
+                          const next = [...prev];
+                          const row = { ...next[ri] };
+                          row.prompt = appendSpokenChunk(row.prompt, chunk);
+                          next[ri] = row;
+                          return next;
+                        })
+                      }
+                    />
                   </td>
                   <td>
                     <input
@@ -452,6 +465,14 @@ export default function DailyCheckIn() {
                 }
                 rows={2}
               />
+              <DictateParagraphControls
+                mergeChunk={(chunk) =>
+                  setOtherEventsByWeekday((prev) => ({
+                    ...prev,
+                    [d.id]: appendSpokenChunk(prev[d.id as WeekdayId] ?? "", chunk),
+                  }))
+                }
+              />
             </label>
           ))}
         </div>
@@ -507,6 +528,9 @@ export default function DailyCheckIn() {
             onChange={(e) => setSkillsToPracticeNextWeek(e.target.value)}
             rows={3}
             placeholder="Skills to focus on next week"
+          />
+          <DictateParagraphControls
+            mergeChunk={(chunk) => setSkillsToPracticeNextWeek((p) => appendSpokenChunk(p, chunk))}
           />
         </label>
       </section>

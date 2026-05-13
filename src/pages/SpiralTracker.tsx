@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import spiralSupport from "../../data/spiral-support.json";
 import { CrisisSupportNote } from "../components/CrisisSupportNote";
+import { DictateParagraphControls } from "../components/DictateParagraphControls";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import type { SpiralEntry } from "../types";
 import { loadSpiral, saveSpiral, uid } from "../storage";
 
@@ -80,6 +82,14 @@ export default function SpiralTracker() {
                 }))
               }
             />
+            <DictateParagraphControls
+              mergeChunk={(chunk) =>
+                setStages((prev) => ({
+                  ...prev,
+                  [s.id]: appendSpokenChunk(prev[s.id] ?? "", chunk),
+                }))
+              }
+            />
           </label>
         ))}
         <label className="field">
@@ -99,6 +109,7 @@ export default function SpiralTracker() {
             onChange={(e) => setOutcomeNote(e.target.value)}
             placeholder="e.g. TIPP, called friend, cried, slept"
           />
+          <DictateParagraphControls mergeChunk={(chunk) => setOutcomeNote((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <button type="button" className="btn" onClick={save}>
           Save spiral log

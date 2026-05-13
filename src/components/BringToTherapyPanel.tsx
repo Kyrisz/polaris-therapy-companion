@@ -1,7 +1,9 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import weeklyReview from "../../data/weekly-review.json";
+import { DictateParagraphControls } from "./DictateParagraphControls";
 import { addCalendarDaysLocal, mondayContainingLocalDate, formatLocalYMD } from "../diary/diaryWeekModel";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import { buildInsights } from "../insights/buildInsights";
 import {
   loadDayTaglines,
@@ -242,6 +244,7 @@ export function BringToTherapyPanel() {
           onChange={(e) => setTopSummary(e.target.value)}
           placeholder="3–5 sentences: what matters most to bring up, what changed, what you want help with."
         />
+        <DictateParagraphControls mergeChunk={(chunk) => setTopSummary((p) => appendSpokenChunk(p, chunk))} />
       </label>
 
       <fieldset className="bring-therapy-fieldset">

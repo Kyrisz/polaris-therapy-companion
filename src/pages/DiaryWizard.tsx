@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import diaryCard from "../../data/diary-card.json";
 import skillsModules from "../../data/skills-modules.json";
+import { DictateParagraphControls } from "../components/DictateParagraphControls";
 import type { ActionYN, DiaryWeekEntry } from "../types";
 import {
   WEEKDAY_LABEL,
@@ -14,6 +15,7 @@ import {
   todayISO,
   weekdayIdFromISO,
 } from "../diary/diaryWeekModel";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import { recordGuidedCheckInForDate } from "../journal/streakLogic";
 import {
   clearWizardDraft,
@@ -387,6 +389,7 @@ export default function DiaryWizard() {
               rows={5}
               placeholder="Example: Argument with partner before work; felt tight in chest most of the morning."
             />
+            <DictateParagraphControls mergeChunk={(chunk) => setPrompt((p) => appendSpokenChunk(p, chunk))} />
           </section>
         ) : null}
 
@@ -584,6 +587,7 @@ export default function DiaryWizard() {
             <h3 className="wizard-question" tabIndex={-1}>Anything else to remember for {weekdayName}?</h3>
             <p className="muted">This goes in the &quot;other events&quot; line for that weekday on the card.</p>
             <textarea value={otherNote} onChange={(e) => setOtherNote(e.target.value)} rows={4} />
+            <DictateParagraphControls mergeChunk={(chunk) => setOtherNote((p) => appendSpokenChunk(p, chunk))} />
           </section>
         ) : null}
 

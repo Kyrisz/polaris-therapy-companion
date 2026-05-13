@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { DictateParagraphControls } from "./DictateParagraphControls";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import { mergeJournalTags } from "../journal/journalTags";
 import type { JournalEntry } from "../types";
 import { loadJournal, saveJournal, uid } from "../storage";
@@ -101,10 +103,12 @@ export function TherapySessionForms() {
         <label className="field">
           What I want to bring up
           <textarea rows={4} value={prepBring} onChange={(e) => setPrepBring(e.target.value)} placeholder="Topics, worries, wins—short bullets are fine." />
+          <DictateParagraphControls mergeChunk={(chunk) => setPrepBring((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <label className="field">
           One goal for this session
           <textarea rows={2} value={prepGoal} onChange={(e) => setPrepGoal(e.target.value)} placeholder="e.g. Ask about medication fear · practice describing one conflict calmly" />
+          <DictateParagraphControls mergeChunk={(chunk) => setPrepGoal((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <button type="button" className="btn" onClick={savePrep}>
           Save prep to journal
@@ -119,14 +123,17 @@ export function TherapySessionForms() {
         <label className="field">
           Main takeaway
           <textarea rows={3} value={debTakeaway} onChange={(e) => setDebTakeaway(e.target.value)} />
+          <DictateParagraphControls mergeChunk={(chunk) => setDebTakeaway((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <label className="field">
           Skill or theme that stood out
           <input type="text" value={debTheme} onChange={(e) => setDebTheme(e.target.value)} />
+          <DictateParagraphControls mergeChunk={(chunk) => setDebTheme((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <label className="field">
           One thing to try before next time
           <textarea rows={2} value={debNext} onChange={(e) => setDebNext(e.target.value)} />
+          <DictateParagraphControls mergeChunk={(chunk) => setDebNext((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <button type="button" className="btn secondary" onClick={saveDebrief}>
           Save debrief to journal

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { getSpeechRecognitionCtor, type SpeechRecError, type SpeechRecEvent, type SpeechRecognitionInstance } from "./voiceOcr";
 
 /**
- * Push-to-talk style dictation: final transcripts are appended to the journal body.
+ * Continuous recognition: each finalized phrase is passed to the callback (e.g. journal body or a short field).
  */
 export function useDictation(appendToBody: (chunk: string) => void) {
   const [listening, setListening] = useState(false);

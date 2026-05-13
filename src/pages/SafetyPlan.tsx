@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { CrisisSupportNote } from "../components/CrisisSupportNote";
+import { DictateParagraphControls } from "../components/DictateParagraphControls";
+import { appendSpokenChunk } from "../journal/spokenTextAppend";
 import { stashSetupWizardStep } from "../setup/setupWizardStorage";
 import { loadSafetyPlan, saveSafetyPlan } from "../storage";
 
@@ -59,6 +61,7 @@ export default function SafetyPlan() {
             rows={3}
             placeholder="e.g. Partner Alex · friend Sam · therapist Tuesday"
           />
+          <DictateParagraphControls mergeChunk={(chunk) => setWhoCanHelp((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <label className="field">
           Crisis numbers or chat links I trust
@@ -68,6 +71,7 @@ export default function SafetyPlan() {
             rows={3}
             placeholder="988 (US) · local warm line · text line you have used before"
           />
+          <DictateParagraphControls mergeChunk={(chunk) => setCrisisNumbers((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <label className="field">
           Grounding that has worked before (short list)
@@ -77,6 +81,7 @@ export default function SafetyPlan() {
             rows={4}
             placeholder="Cold water on wrists · 4-7-8 breathing · name five blue things"
           />
+          <DictateParagraphControls mergeChunk={(chunk) => setGroundingList((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <label className="field">
           If I notice early warning signs, I will…
@@ -86,6 +91,7 @@ export default function SafetyPlan() {
             rows={4}
             placeholder="If I start pacing and Googling symptoms → put phone in kitchen drawer and text one person."
           />
+          <DictateParagraphControls mergeChunk={(chunk) => setIfThenPlan((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <label className="field">
           Environment or meds notes (optional)
@@ -95,6 +101,7 @@ export default function SafetyPlan() {
             rows={2}
             placeholder="Anything you want future-you to remember in a hard moment."
           />
+          <DictateParagraphControls mergeChunk={(chunk) => setEnvironmentNotes((p) => appendSpokenChunk(p, chunk))} />
         </label>
         <button type="button" className="btn" onClick={save}>
           Save safety card
