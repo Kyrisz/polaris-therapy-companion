@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "title": "DBT Diary Card (matches DBT Diary Card pg 1.png)",
+  "sourceFiles": [
+    "DBT Diary Card pg 1.png",
+    "DBT Diary Card How To pg1.png"
+  ],
+  "fillFrequencyOptions": [
+    { "id": "daily", "label": "Daily" },
+    { "id": "2_3_week", "label": "2–3 times per week" },
+    { "id": "weekly", "label": "Once a week" }
+  ],
+  "intensityScaleEmotionsUrges": {
+    "min": 0,
+    "max": 5,
+    "hint": "0 = None / Low, 5 = High / Strong (per your printed card)."
+  },
+  "targetBehaviorSlotCount": 4,
+  "targetBehaviorColumnLabels": ["1", "2", "3", "4"],
+  "targetBehaviorHint": "Name up to four target problem behaviors you and your clinician are tracking (e.g. self-harm, substance use, avoidance). Each has Urge 0–5 and Action Y or N.",
+  "promptingEventRowCount": 10,
+  "promptingEventsHint": "Prompting events: internal or external triggers tied to that row (per How To pg1).",
+  "emotionColumns": [
+    { "id": "hurt_pain", "label": "Hurt / Pain" },
+    { "id": "sadness", "label": "Sadness" },
+    { "id": "shame_guilt", "label": "Shame / Guilt" },
+    { "id": "anger", "label": "Anger" },
+    { "id": "fear_anxiety", "label": "Fear / Anxiety" },
+    { "id": "joy", "label": "Joy" },
+    { "id": "jealousy", "label": "Jealousy" }
+  ],
+  "usedSkillsColumn": {
+    "min": 0,
+    "max": 7,
+    "label": "Used skills",
+    "legend": [
+      { "value": 0, "text": "Not thought about or used" },
+      { "value": 1, "text": "Thought about, not used, didn't want to" },
+      { "value": 2, "text": "Thought about, not used, wanted to" },
+      { "value": 3, "text": "Tried but couldn't use them" },
+      { "value": 4, "text": "Tried, could do them but they didn't help" },
+      { "value": 5, "text": "Tried, could use them, helped" },
+      { "value": 6, "text": "Automatically used them, didn't help" },
+      { "value": 7, "text": "Automatically used them, helped" }
+    ]
+  },
+  "otherEventsWeekdays": [
+    { "id": "mon", "label": "Monday" },
+    { "id": "tue", "label": "Tuesday" },
+    { "id": "wed", "label": "Wednesday" },
+    { "id": "thu", "label": "Thursday" },
+    { "id": "fri", "label": "Friday" },
+    { "id": "sat", "label": "Saturday" },
+    { "id": "sun", "label": "Sunday" }
+  ],
+  "otherEventsSectionTitle": "Other events to note during the week"
+}

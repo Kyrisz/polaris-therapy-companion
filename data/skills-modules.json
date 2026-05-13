@@ -1,0 +1,74 @@
+{
+  "version": 2,
+  "title": "DBT Diary Card skills (matches DBT Diary Card pg 2.png)",
+  "sourceFiles": ["DBT Diary Card pg 2.png", "DBT Diary Card How To pg2.png"],
+  "weekdayIds": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+  "weekdayLabels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  "skillsToPracticeNextWeekTitle": "Skills to practice for next week",
+  "modules": [
+    {
+      "id": "mindfulness",
+      "name": "Core mindfulness skills",
+      "sectionNumber": 9,
+      "skills": [
+        { "id": "mw_wise_mind", "label": "Wise Mind", "hint": "Be reasonable with your emotions." },
+        { "id": "mw_observe", "label": "Observe", "hint": "Just notice, avoid reactions." },
+        { "id": "mw_describe", "label": "Describe", "hint": "Use words, label the facts." },
+        { "id": "mw_participate", "label": "Participate", "hint": "Fully engage in experiences." },
+        { "id": "mw_nonjudgmental", "label": "Non-Judgmental", "hint": "Separate the facts." },
+        { "id": "mw_one_mindfully", "label": "One-mindfully", "hint": "Be within the moment." },
+        { "id": "mw_effectively", "label": "Effectively", "hint": "Focus on what works." }
+      ]
+    },
+    {
+      "id": "emotion_regulation",
+      "name": "Emotional regulation skills",
+      "sectionNumber": 10,
+      "skills": [
+        { "id": "er_stop", "label": "Stop", "hint": "Don't react; pause." },
+        { "id": "er_step_back", "label": "Take a step back", "hint": "Breathe in, calm your mind." },
+        { "id": "er_observe_facts", "label": "Observe", "hint": "Check all the facts for validity." },
+        { "id": "er_proceed_mindfully", "label": "Proceed mindfully", "hint": "Think through next steps." },
+        { "id": "er_accumulate_positive", "label": "Accumulate positive experiences", "hint": "Pleasant events; activity scheduling." },
+        { "id": "er_build_mastery", "label": "Build mastery", "hint": "Tasks that build confidence." },
+        { "id": "er_coping_ahead", "label": "Coping ahead", "hint": "Plan for emotional events." },
+        { "id": "er_please", "label": "PLEASE", "hint": "Physical Illness (treat), Eat well, Avoid mood-altering substances, Sleep, Exercise." },
+        { "id": "er_ride_wave", "label": "Ride the wave", "hint": "Accept and tolerate emotions." },
+        { "id": "er_positive_affirmations", "label": "Positive affirmations", "hint": "Positive self-talk." },
+        { "id": "er_opposite_action", "label": "Opposite action", "hint": "Act opposite to strong emotions when it fits the facts." }
+      ]
+    },
+    {
+      "id": "distress_tolerance",
+      "name": "Distress tolerance skills",
+      "sectionNumber": 11,
+      "skills": [
+        { "id": "dt_tipp", "label": "TIPP", "hint": "Temperature, Intense exercise, Paced breathing, Paired muscle relaxation." },
+        { "id": "dt_accepts", "label": "ACCEPTS", "hint": "Activities, Contributing, Comparisons, Emotions, Pushing away, Thoughts, Sensations." },
+        { "id": "dt_improve", "label": "IMPROVE", "hint": "Imagery, Meaning, Prayer (or practice), Relaxation, One thing at a time, Vacation, Encouragement." },
+        { "id": "dt_self_soothe", "label": "Self-sooth", "hint": "Ground with the five physical senses." },
+        { "id": "dt_pros_cons", "label": "List pros and cons", "hint": "Of urges or behaviors." },
+        { "id": "dt_problem_solving", "label": "Problem solving", "hint": "Identify solutions." },
+        { "id": "dt_radical_acceptance", "label": "Radical acceptance", "hint": "Accept reality as it is." },
+        { "id": "dt_half_smile_willing_hands", "label": "Half-smiling / willing hands", "hint": "Focus your body." },
+        { "id": "dt_alternate_rebellion", "label": "Alternate rebellion", "hint": "Healthy alternatives." }
+      ]
+    },
+    {
+      "id": "interpersonal",
+      "name": "Interpersonal effectiveness (relationships)",
+      "sectionNumber": 12,
+      "skills": [
+        { "id": "ie_prioritize_goals", "label": "Prioritize your interpersonal goals", "hint": null },
+        { "id": "ie_dear", "label": "DEAR", "hint": "Describe, Express, Assert, Reinforce." },
+        { "id": "ie_man", "label": "MAN", "hint": "Mindful, Appear confident, Negotiate." },
+        { "id": "ie_give", "label": "GIVE", "hint": "Gentle, Interested, Validate, Easy manner." },
+        { "id": "ie_fast", "label": "FAST", "hint": "Fair, (No) apologies, Stick to values, Truthful." },
+        { "id": "ie_nondefensive_listening", "label": "Use non-defensive listening", "hint": "Seek clarity." },
+        { "id": "ie_validation_others", "label": "Validation of others", "hint": "Acknowledge emotions." },
+        { "id": "ie_boundaries", "label": "Identify and set your boundaries", "hint": null },
+        { "id": "ie_end_destructive", "label": "End destructive (negative) relationships", "hint": null }
+      ]
+    }
+  ]
+}

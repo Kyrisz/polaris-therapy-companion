@@ -1,0 +1,22 @@
+# Dependencies & build
+node_modules/
+dist/
+
+# Local / secrets
+.env
+.env.*
+!.env.example
+
+# User exports (may contain health data)
+backups/
+
+# Editor & OS
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Debug
+*.local

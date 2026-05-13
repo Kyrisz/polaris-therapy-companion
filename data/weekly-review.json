@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "title": "Weekly DBT check-in prompts",
+  "prompts": [
+    {
+      "id": "patterns",
+      "label": "Patterns you notice",
+      "text": "Which urges or emotions showed up on multiple days? Any common triggers?"
+    },
+    {
+      "id": "skills_that_worked",
+      "label": "Skills that helped",
+      "text": "List 2–3 skills you actually used. What made them more or less effective?"
+    },
+    {
+      "id": "skills_to_practice",
+      "label": "Skills to practice next week",
+      "text": "Pick one under-used skill to rehearse daily for 2–5 minutes."
+    },
+    {
+      "id": "relationship_repair",
+      "label": "Relationships",
+      "text": "Any repair, boundary, or validation you want to try next week?"
+    },
+    {
+      "id": "safety",
+      "label": "Safety",
+      "text": "Did safety worsen at any point? What early cues will you watch for next week?"
+    },
+    {
+      "id": "pattern_one_sentence",
+      "label": "One pattern you noticed",
+      "text": "In a sentence or two: what showed up more than once (urges, emotions, situations)?"
+    },
+    {
+      "id": "skill_next_week_one",
+      "label": "One skill for next week",
+      "text": "Pick one skill or intention to carry into next week (with your therapist if you have one)."
+    }
+  ]
+}

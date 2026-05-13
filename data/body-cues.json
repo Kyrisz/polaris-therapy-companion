@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "title": "Body cues and possible emotions (psychoeducation)",
+  "disclaimer": "Body cues overlap across emotions and medical conditions. Use this as a starting hypothesis, not a diagnosis. If sensations are new, severe, or worrisome, consider medical evaluation.",
+  "references_note": "Grounded in interoception research and common clinical psychoeducation about autonomic arousal (e.g., muscle tension, breathing changes) associated with stress responses.",
+  "cues": [
+    {
+      "id": "chest_tight",
+      "bodyArea": "Chest / heart",
+      "sensation": "Tightness, pressure, racing heart",
+      "possibleFeelings": ["Fear / anxiety", "Anger", "Grief", "Excitement"],
+      "regulation_hint": "Slow exhale longer than inhale; paced breathing; gentle shoulder drop."
+    },
+    {
+      "id": "throat_lump",
+      "bodyArea": "Throat",
+      "sensation": "Lump, constriction, hard to swallow",
+      "possibleFeelings": ["Sadness", "Grief", "Fear", "Shame"],
+      "regulation_hint": "Name the emotion; self-validation; warm drink; humming can soothe vagal tone for some people."
+    },
+    {
+      "id": "stomach_knot",
+      "bodyArea": "Belly",
+      "sensation": "Knot, nausea, butterflies",
+      "possibleFeelings": ["Fear / anxiety", "Dread", "Guilt", "Anticipation"],
+      "regulation_hint": "Ground feet; cold water on wrists; small structured task; TIPP temperature briefly."
+    },
+    {
+      "id": "jaw_clench",
+      "bodyArea": "Jaw / face",
+      "sensation": "Clenching, grinding, facial heat",
+      "possibleFeelings": ["Anger", "Stress", "Determination", "Shame"],
+      "regulation_hint": "Unclench jaw on exhale; soften eyes; progressive muscle release."
+    },
+    {
+      "id": "shoulders_neck",
+      "bodyArea": "Shoulders / neck",
+      "sensation": "Bracing, pain, stiffness",
+      "possibleFeelings": ["Stress", "Anger", "Overwhelm", "Hypervigilance"],
+      "regulation_hint": "Gentle neck rolls; heat pack; brief movement; check posture."
+    },
+    {
+      "id": "limbs_heavy",
+      "bodyArea": "Arms / legs",
+      "sensation": "Heavy, leaden, slow",
+      "possibleFeelings": ["Sadness", "Depression-like shutdown", "Fatigue", "Dissociation"],
+      "regulation_hint": "Opposite action in tiny steps; cold splash; reach out for connection if safe."
+    },
+    {
+      "id": "restless",
+      "bodyArea": "Whole body",
+      "sensation": "Restless, keyed up, can't sit still",
+      "possibleFeelings": ["Anxiety", "Anger", "Agitation", "Excitement"],
+      "regulation_hint": "Paced walking; wall push; structured breathing; reduce caffeine if relevant."
+    },
+    {
+      "id": "numb_tingly",
+      "bodyArea": "Skin / limbs",
+      "sensation": "Numbness, tingling, floaty",
+      "possibleFeelings": ["Dissociation", "Panic", "Shock", "Overwhelm"],
+      "regulation_hint": "54321 grounding; strong tastes; orient to time/place; slow movement."
+    },
+    {
+      "id": "heat_flush",
+      "bodyArea": "Face / skin",
+      "sensation": "Flushing, sweating, hot",
+      "possibleFeelings": ["Embarrassment / shame", "Anger", "Panic", "Illness"],
+      "regulation_hint": "Cool water; slow breathing; name trigger without judgment."
+    }
+  ]
+}

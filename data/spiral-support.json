@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "title": "Thought spiral support (DBT-informed)",
+  "disclaimer": "For crisis safety, use your crisis plan or local emergency services. This is a self-help log, not treatment.",
+  "spiralStages": [
+    { "id": "trigger", "label": "Trigger (fact)", "prompt": "What happened first? One sentence, observable." },
+    { "id": "interpretation", "label": "Interpretation / meaning", "prompt": "What story did your mind add?" },
+    { "id": "emotion", "label": "Emotion spike", "prompt": "Primary emotions and intensity 0–10." },
+    { "id": "body", "label": "Body response", "prompt": "Where do you feel it? What sensations?" },
+    { "id": "urges", "label": "Urges", "prompt": "Urges to act (avoid, attack, substance, self-harm, etc.) — rate 0–5." },
+    { "id": "skills", "label": "Skills tried", "prompt": "What you tried and how much it helped (0–5)." }
+  ],
+  "de_escalation_skills": [
+    {
+      "id": "stop",
+      "name": "STOP",
+      "steps": ["Stop", "Take a step back", "Observe", "Proceed mindfully"]
+    },
+    {
+      "id": "check_facts",
+      "name": "Check the Facts",
+      "steps": [
+        "What is the emotion and its intensity?",
+        "What is the prompting event (facts only)?",
+        "What assumptions are you making?",
+        "Does the emotion fit the facts? If yes, problem-solve; if no, opposite action."
+      ]
+    },
+    {
+      "id": "tipp",
+      "name": "TIPP (brief distress tolerance)",
+      "steps": [
+        "Temperature: cool water on face/hands (brief, safe)",
+        "Intense exercise briefly if medically appropriate",
+        "Paced breathing",
+        "Paired muscle relaxation"
+      ]
+    },
+    {
+      "id": "self_soothe",
+      "name": "Self-soothe (six senses)",
+      "steps": [
+        "Pick one sense at a time; choose kind, simple inputs (sound, scent, texture, taste, sight, movement)."
+      ]
+    }
+  ]
+}

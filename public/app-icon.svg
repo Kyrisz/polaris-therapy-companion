@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="32" x2="448" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9eb6f0" />
+      <stop offset="0.38" stop-color="#d8e2fc" />
+      <stop offset="0.72" stop-color="#ecefff" />
+      <stop offset="1" stop-color="#f7f8ff" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 256) rotate(90) scale(210)">
+      <stop stop-color="rgba(107,99,216,0.25)"/>
+      <stop offset="1" stop-color="rgba(107,99,216,0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+
+  <!-- Compass arcs -->
+  <g stroke="#6b63d8" stroke-width="26" stroke-linecap="round" opacity="0.55">
+    <path d="M164 164c64-64 120-64 184 0"/>
+    <path d="M348 348c-64 64-120 64-184 0"/>
+    <path d="M150 348c-28-48-28-136 0-184" opacity="0.42"/>
+    <path d="M362 164c28 48 28 136 0 184" opacity="0.42"/>
+  </g>
+
+  <!-- Dot markers -->
+  <g fill="#6b63d8" opacity="0.55">
+    <circle cx="358" cy="214" r="11"/>
+    <circle cx="358" cy="298" r="11"/>
+    <circle cx="154" cy="214" r="11"/>
+    <circle cx="154" cy="298" r="11"/>
+  </g>
+
+  <!-- Rounded 4-point star -->
+  <path
+    d="M256 96
+       C270 96 277 105 280 114
+       L304 202
+       C306 210 312 216 320 218
+       L398 242
+       C407 245 416 252 416 266
+       C416 280 407 287 398 290
+       L320 314
+       C312 316 306 322 304 330
+       L280 418
+       C277 427 270 436 256 436
+       C242 436 235 427 232 418
+       L208 330
+       C206 322 200 316 192 314
+       L114 290
+       C105 287 96 280 96 266
+       C96 252 105 245 114 242
+       L192 218
+       C200 216 206 210 208 202
+       L232 114
+       C235 105 242 96 256 96Z"
+    fill="#ffffff"
+    opacity="0.95"
+  />
+
+  <!-- Inner sparkle -->
+  <path d="M256 168l14 50 50 14-50 14-14 50-14-50-50-14 50-14 14-50z" fill="#6b63d8" opacity="0.22"/>
+  <path d="M256 188l10 34 34 10-34 10-10 34-10-34-34-10 34-10 10-34z" fill="#ffffff" opacity="0.55"/>
+</svg>
